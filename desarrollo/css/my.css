@@ -1,3 +1,32 @@
+
+.clogo{
+    background-color: aqua;
+}
+
+.cslide{
+    background-color: coral;
+}
+
+
+
+.cform{
+    background-color: gold;
+}
+
+
+
+.cfoo{
+    background-color: darkorchid;
+}
+
+
+
+
+
+
+
+
+
 @keyframes hover-color {
   from {
     border-color: #c0c0c0; }

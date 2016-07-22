@@ -11,6 +11,8 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.2.0",
     "gulp-sass": "^2.3.2"
   }
 }

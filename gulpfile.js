@@ -1,26 +1,46 @@
 
 var gulp = require('gulp'),
-    sass = require('gulp-sass')
+    sass = require('gulp-sass'),
+	connect = require('gulp-connect');
 
-var input = './node_modules/bootstrap-sass/assets/stylesheets/';
-//var input = './prueba/*.scss';
+
+// path de archivos para compilar y compilado
+var input = './desarrollo/bootstrap-sass/assets/stylesheets/';
 var output = './desarrollo/css';
 
 
 gulp.task('sass', function(){
-	   gulp.src(input + 'app.scss')
+	gulp.src(input + 'app.scss')
 		.pipe(sass())
-		.pipe(gulp.dest(output));
+		.pipe(gulp.dest(output))
+		.pipe(connect.reload());
+});
+
+gulp.task('connect', function(){
+	connect.server({
+		root: 'desarrollo',
+		livereload: true
+	});
 });
 
 
+gulp.task('html', function () {
+	gulp.src('./desarrollo/*.html')
+	.pipe(connect.reload());
+});
 
 
 gulp.task('watch', function(){
-  gulp.watch(input + '**/*.scss' , ['sass']);
+	gulp.watch(input + '**/*.scss' , ['sass']);
+	gulp.watch('./desarrollo/*.html' , ['html']);
+
+
 });
 
-gulp.task('default', ['sass', 'watch']);
+
+
+// tarea por defecto
+gulp.task('default', ['sass','connect', 'watch']);
 
 
 

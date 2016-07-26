@@ -1,20 +1,20 @@
 
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    
 	connect = require('gulp-connect');
 
-
+//sass = require('gulp-sass'),
 // path de archivos para compilar y compilado
 var input = './desarrollo/bootstrap-sass/assets/stylesheets/';
 var output = './desarrollo/css';
 
 
-gulp.task('sass', function(){
-	gulp.src(input + 'app.scss')
-		.pipe(sass())
-		.pipe(gulp.dest(output))
-		.pipe(connect.reload());
-});
+// gulp.task('sass', function(){
+// 	gulp.src(input + 'app.scss')
+// 		.pipe(sass())
+// 		.pipe(gulp.dest(output))
+// 		.pipe(connect.reload());
+// });
 
 gulp.task('css', function () {
 	gulp.src('./desarrollo/css/*.css')
@@ -24,6 +24,7 @@ gulp.task('css', function () {
 gulp.task('connect', function(){
 	connect.server({
 		root: 'desarrollo',
+		port: 3000,
 		livereload: true
 	});
 });
@@ -36,7 +37,7 @@ gulp.task('html', function () {
 
 
 gulp.task('watch', function(){
-	gulp.watch(input + '**/*.scss' , ['sass']);
+	//gulp.watch(input + '**/*.scss' , ['sass']);
 	gulp.watch('./desarrollo/*.html' , ['html']);
 	gulp.watch('./desarrollo/css/*.css' , ['css']);
 
@@ -45,9 +46,9 @@ gulp.task('watch', function(){
 
 
 // tarea por defecto
-gulp.task('default', ['sass','connect','watch']);
+//gulp.task('default', ['sass','connect','watch']);
 
-
+gulp.task('default', ['connect','watch']);
 
 
 

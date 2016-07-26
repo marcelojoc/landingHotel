@@ -16,6 +16,11 @@ gulp.task('sass', function(){
 		.pipe(connect.reload());
 });
 
+gulp.task('css', function () {
+	gulp.src('./desarrollo/css/*.css')
+	.pipe(connect.reload());
+});
+
 gulp.task('connect', function(){
 	connect.server({
 		root: 'desarrollo',
@@ -33,14 +38,14 @@ gulp.task('html', function () {
 gulp.task('watch', function(){
 	gulp.watch(input + '**/*.scss' , ['sass']);
 	gulp.watch('./desarrollo/*.html' , ['html']);
-
+	gulp.watch('./desarrollo/css/*.css' , ['css']);
 
 });
 
 
 
 // tarea por defecto
-gulp.task('default', ['sass','connect', 'watch']);
+gulp.task('default', ['sass','connect','watch']);
 
 
 

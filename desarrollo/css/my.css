@@ -17,60 +17,127 @@ font-size: 1.9em;
     margin-left: 1em;
 }
 
-.wifi_content{
+/*cambio en el boton*/
+
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: #000;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
+  background-color: #009ED2;
+  border: solid 1px #008FBF;
+}
+ 
+
+ 
+/* Estilos del estado :hover del botón */
+/* Uno de los estilos más sencillos y eficaces para el estado :hover
+   consiste en subir hacia arriba ligeramente la imagen de fondo del
+   botón, pero puedes definir otros estilos adicionales si quieres. */
+.btn-ttc:hover {
+  background-position: 0 -15px;
+  background-color: #008FBF;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) 
+{ 
+    
+
+.wifi_content {
     background-color: #A1A3A6;
-    border: 1em solid white;
+    margin-bottom:0.5em;
     width: 40%;
     color: white;
-
+    padding-top:0.5em;
+    border: 0.5em solid #fff ;
+    z-index: 9999;
+    margin-top: -5%;
+    margin-bottom: 5%;
 }
+
+
 .wifi_content p{
-    padding: 1em;
+    font-size: 0.8em;
+    padding: 0.7em;
     margin: auto;
-    
-    
+    text-align: center;
 }
 
 
+.wifi_content i{
+  position: relative;
+  display: block;
+  text-align: center;
+    
+}
 
+.slide_relativo{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    position: relative;
+}
+    
+}
 
 
 
 
 @media (max-width: 768px ) {
 
+.wifi_content{
+    background-color: #A1A3A6;
+    margin-bottom:0.5em;
+    width: 65%;
+    color: white;
+    padding-top:0.5em;
+}
+
+.wifi_content p{
+    font-size: 0.8em;
+    padding: 0.7em;
+    margin: auto;
+    text-align: center;
+}
 
 
+.wifi_content i{
+  position: relative;
+  display: block;
+  text-align: center;
+    
+}
+
+.logo_movil img{
+    width: 50%; 
+    height: 50%;
+
+}
 
 
 
@@ -120,62 +187,3 @@ font-size: 1.9em;
 
 
 
-
-
-
-/**
- * This theme is an example to show how you can create your own.
- */
-.pika-single.dark-theme {
-    color: #fff;
-    background: #DCDDDF;
-    border: 1px solid #666;
-    border-bottom-color: #999;
-}
-
-.dark-theme .pika-label {
-    background-color: #DCDDDF;
-}
-
-.dark-theme .pika-prev,
-.dark-theme .is-rtl .pika-next {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAQ0lEQVR4Ae3KIQ4AIBTD0N0/IeHGI3UIRA3ut/Zl+ltXc5++htVAmIAwAWECwgSEKbgthEoIlRAqIVRCqINQB9nDgQd7ktwFo6UpWQAAAABJRU5ErkJggg==');
-}
-
-.dark-theme .pika-next,
-.dark-theme .is-rtl .pika-prev {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAP0lEQVQ4y+3TMQoAMAgEwfwfAvvjTZ1uGzuvHhBPPGczEG+FRqqRaqQaqUaqkX6QBmmjacvQ6qEVTjsh+xizebvlaWptGXZAAAAAAElFTkSuQmCC');
-}
-
-.dark-theme .pika-table th {
-    color: #DCDDDF;
-}
-
-.dark-theme .pika-button {
-    color: #fff;
-    background: #222;
-}
-
-.dark-theme .pika-week {
-    color: #999;
-}
-
-.dark-theme .is-today .pika-button {
-    color: #33aaff;
-}
-
-.dark-theme .is-selected .pika-button {
-    color: #fff;
-    background: #33aaff;
-    box-shadow: inset 0 1px 3px #178fe5;
-}
-
-.dark-theme .is-disabled .pika-button {
-    color: #999;
-    opacity: .3;
-}
-
-.dark-theme .pika-button:hover {
-    color: #fff !important;
-    background: #ff8000 !important;
-}

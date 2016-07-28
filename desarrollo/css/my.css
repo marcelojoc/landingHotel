@@ -9,8 +9,21 @@ body{
 
 font-family: "Saya";
 font-size: 1.9em;
-
 }
+
+input[type=text ] {
+    color: #231F20;
+    font-size: 0.9em;
+}
+
+input[type=email ] {
+    color: #231F20;
+    font-size: 0.9em;
+}
+
+.social{
+     color: #231F20;
+ }
 
 .wifi_borde{
     border-bottom: 1em solid #A1A3A6;
@@ -22,7 +35,7 @@ font-size: 1.9em;
 .btn-ttc,
 .btn-ttc:hover,
 .btn-ttc:active {
-  color: #000;
+  color: #fff;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
   background-color: #009ED2;
   border: solid 1px #008FBF;
@@ -31,36 +44,12 @@ font-size: 1.9em;
 
  
 /* Estilos del estado :hover del botón */
-/* Uno de los estilos más sencillos y eficaces para el estado :hover
-   consiste en subir hacia arriba ligeramente la imagen de fondo del
-   botón, pero puedes definir otros estilos adicionales si quieres. */
+
 .btn-ttc:hover {
   background-position: 0 -15px;
   background-color: #008FBF;
   color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -73,12 +62,12 @@ font-size: 1.9em;
 .wifi_content {
     background-color: #A1A3A6;
     margin-bottom:0.5em;
-    width: 40%;
+    width: 30%;
     color: white;
     padding-top:0.5em;
-    border: 0.5em solid #fff ;
+    border: 0.4em solid #fff ;
     z-index: 9999;
-    margin-top: -5%;
+    margin-top: -4%;
     margin-bottom: 5%;
 }
 
@@ -99,9 +88,9 @@ font-size: 1.9em;
 }
 
 .slide_relativo{
-
     position: relative;
 }
+
     
 }
 
@@ -146,44 +135,3 @@ font-size: 1.9em;
 /*@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
 @media (min-width: @screen-lg-min) { ... }*/
-
-
-
-
-
-
-
-
-
-
-
-
-.clogo{
-    background-color: aqua;
-}
-
-
-.cslide{
-    background-color: lightcoral;
-}
-
-
-
-.cform{
-    background-color: burlywood;
-}
-
-
-
-
-.cfoo{
-    background-color: darkorchid;
-}
-
-.cwifi{
-    background-color: #A2A3A7;
-    color: white;
-}
-
-
-

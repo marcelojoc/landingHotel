@@ -1,10 +1,24 @@
 $(function () {
   $('.carousel').carousel();
 
-var divCheck = $('#divCheck');
-    divCheck.css('display', 'none');
+    var divCheck = $('#divCheck'); // asigno el elemento a la variable para manipularla despues
+    divCheck.css('display', 'none'); // pongo el atributo no visible para todo el elemento
 
 
+		$("#radio-0").click(function(){
+            $('#radio0').prop('checked', true)
+            divCheck.show("swing");
+		 });
+
+		$("#radio-1").click(function(){
+			divCheck.hide("swing");
+            $('#radio1').prop('checked', true)
+		 });
+
+
+
+
+/*
 
 		$("#radio-0").click(function(){
 			divCheck.show("swing");
@@ -25,6 +39,7 @@ var divCheck = $('#divCheck');
 		});
 
 
+*/
 
 // picker del formulario
 var picker = new Pikaday(

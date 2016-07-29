@@ -4,7 +4,7 @@ $(function () {
     var divCheck = $('#divCheck'); // asigno el elemento a la variable para manipularla despues
     divCheck.css('display', 'none'); // pongo el atributo no visible para todo el elemento
 
-
+    // dejo visible o no el input de la fecha
 		$("#radio-0").click(function(){
             $('#radio0').prop('checked', true)
             divCheck.show("swing");
@@ -15,31 +15,6 @@ $(function () {
             $('#radio1').prop('checked', true)
 		 });
 
-
-
-
-/*
-
-		$("#radio-0").click(function(){
-			divCheck.show("swing");
-        if(!$("#radio0").is( ":checked" )){
-              $("#radio0").attr("checked", true);
-        }else{
-
-          $("#radio0").attr("checked", false);
-        }
-
-     
-		 });
-
-
-		$("#radio1 ").click(function(){
-			divCheck.hide("swing");
-      
-		});
-
-
-*/
 
 // picker del formulario
 var picker = new Pikaday(
@@ -55,5 +30,18 @@ var picker = new Pikaday(
         yearRange: [2000,2020]
     });
 
+
+    // validacion de correo nombre y fecha
+
+    $('#form_log').submit(function(e){
+
+
+
+       setTimeout(function(){
+
+         $( "#alerta" ).hide( 1000 );
+       }, 2000);
+return false
+    });
 
 });

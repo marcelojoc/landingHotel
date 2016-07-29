@@ -99,39 +99,39 @@ input[type=email ] {
 
 @media (max-width: 768px ) {
 
-.wifi_content{
-    background-color: #A1A3A6;
-    margin-bottom:0.5em;
-    width: 65%;
-    color: white;
-    padding-top:0.5em;
-}
+    .wifi_content{
+        background-color: #A1A3A6;
+        margin-bottom:0.5em;
+        width: 65%;
+        color: white;
+        padding-top:0.5em;
+    }
 
-.wifi_content p{
-    font-size: 0.8em;
-    padding: 0.7em;
-    margin: auto;
+    .wifi_content p{
+        font-size: 0.8em;
+        padding: 0.7em;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    .wifi_content i{
+    position: relative;
+    display: block;
     text-align: center;
-}
+        
+    }
 
+    .logo_movil img{
+        width: 50%; 
+        height: 50%;
 
-.wifi_content i{
-  position: relative;
-  display: block;
-  text-align: center;
-    
-}
-
-.logo_movil img{
-    width: 50%; 
-    height: 50%;
-
+    }
+  
 }
 
 
 
-    
-}
 /*@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
 @media (min-width: @screen-lg-min) { ... }*/

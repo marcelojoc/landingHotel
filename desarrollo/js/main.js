@@ -19,10 +19,8 @@ $(function () {
 // picker del formulario
 var picker = new Pikaday(
     {
-        field: document.getElementById('check'),
-        
+        field: document.getElementById('check'),    
         position: 'bottom right',
-        //reposition: false,
         firstDay: 1,
         format: 'D/M/YYYY',
         minDate: new Date(),
@@ -36,12 +34,41 @@ var picker = new Pikaday(
     $('#form_log').submit(function(e){
 
 
+/*
+1) traerme los datos que estan en los campos
+2) comprobar que tengan datos los campos
+3) verificar si es visitante o huesped
+4) devilver un verdadero o falso 
+5) si es falso disparar el setTiemout con el alert.
 
-       setTimeout(function(){
+ */
+var email= $("#txtmail").val();
+var nombre = $("#txtnombre").val();
 
-         $( "#alerta" ).hide( 1000 );
-       }, 2000);
-return false
-    });
+if (email == "" || nombre == "") {
+    
+        showAlert()
+        return false
+
+} else {
+    
+    
+
+
+}
+
 
 });
+
+});
+
+
+function showAlert(){
+
+        setTimeout(function(){
+
+        $( "#alerta" ).hide( 1000 );
+        }, 2000);
+        
+
+}

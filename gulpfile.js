@@ -1,7 +1,8 @@
 
 var gulp = require('gulp'),
-    
-	connect = require('gulp-connect');
+	connect = require('gulp-connect'),
+	minify= require('gulp-minify-css'),
+	concat = require('gulp-concat');
 
 //sass = require('gulp-sass'),
 // path de archivos para compilar y compilado
@@ -15,6 +16,8 @@ var output = './desarrollo/css';
 // 		.pipe(gulp.dest(output))
 // 		.pipe(connect.reload());
 // });
+
+
 
 gulp.task('css', function () {
 	gulp.src('./desarrollo/css/*.css')
@@ -60,7 +63,45 @@ gulp.task('default', ['connect','watch']);
 
 
 
+//produccion
 
+// gulp.task('pjs', function(){
+//    gulp.src('./desarrollo/js/*.js')
+//    .pipe(gulp.dest('produccion/js/'));
+// });
+
+gulp.task('pcss', function(){
+   gulp.src('./desarrollo/css/*.css')
+   .pipe(concat('main.css'))
+   .pipe(minify())
+   .pipe(gulp.dest('produccion/css/'));
+});
+
+
+
+gulp.task('pjs', function() {
+  gulp.src('./desarrollo/js/*.js')	
+    .pipe(gulp.dest('produccion/js/'))
+});
+
+gulp.task('mvhtml', function(){
+	gulp.src('./desarrollo/*.html')
+	.pipe(gulp.dest('produccion/'));
+});
+
+
+
+
+gulp.task('pconnect', function(){
+	connect.server({
+		root: 'produccion',
+		port: 3030,
+		livereload: true
+	});
+});
+
+
+gulp.task('produccion', ['pjs','pcss','mvhtml','pconnect']);
 
 
 
